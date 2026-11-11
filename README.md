@@ -8,13 +8,25 @@ A terminal snake game written in C (Windows console or ncurses) where the core p
 | Linked-list **queue** | The numbers the snake eats. They are shown (FIFO order) on the game-over screen and printed to the terminal on exit. |
 | 2D occupancy grid | O(1) wall/self-collision checks and food placement that never lands on the snake. |
 
+## ▶️ Play it on Windows
+
+Open **PowerShell** or **Windows Terminal** and run:
+
+```powershell
+iwr https://github.com/akarshto/SnakeGameUsingDataStructures/releases/latest/download/snake.exe -OutFile snake.exe; .\snake.exe
+```
+
+Or [download snake.exe](https://github.com/akarshto/SnakeGameUsingDataStructures/releases/latest/download/snake.exe) and run it from a terminal window. Don't double-click it, or the final score will vanish when the game closes.
+
+> Windows SmartScreen may warn about an unknown publisher because the exe isn't code-signed. Click **More info → Run anyway**, or build it yourself from source (see below).
+
 ## Run it
 
 ### Windows (no libraries needed)
 
 The game uses the native Windows console, so there is nothing to install.
 
-- **Quickest:** open `cmd`, PowerShell or Windows Terminal in this folder and run `snake.exe` (a prebuilt 64-bit exe is included).
+- **Quickest:** use the one-line command in the **Play it on Windows** section above, or download `snake.exe` from the [Releases page](https://github.com/akarshto/SnakeGameUsingDataStructures/releases/latest).
 - **Build it yourself:** run `build.bat`. It uses `gcc` (MinGW-w64) if found, otherwise `cl` from a Visual Studio Developer Command Prompt. With MinGW you can also run `mingw32-make`.
 
 Run it from a console window rather than double-clicking, so you can see the final output after quitting.
